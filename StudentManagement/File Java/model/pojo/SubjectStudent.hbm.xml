@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate
+Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="1412573_hibernate" name="model.pojo.SubjectStudent" table="subject_student">
+        <composite-id name="subjectStudentID" class="model.pojo.SubjectStudentID">
+            <key-property name="subjectID" column="subject_id" length="7" type="string" />
+            <key-property name="studentID" column="student_id" length="7" type="string" />
+        </composite-id>
+        <property name="subjectNameID" column="subject_name_id" type="int"/>
+        <property name="attendanceID" column="attendance_id" type="int"/>
+    </class>
+</hibernate-mapping>

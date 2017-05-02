@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate
+Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="1412573_hibernate" name="model.pojo.Subject" table="subject">
+        <composite-id name="subjectID" class="model.pojo.SubjectID">
+            <key-property name="code" column="id" length="7" type="string" />
+            <key-property name="nameId" column="name_id" type="int" />
+        </composite-id>
+        <property name="classroom" type="string">
+            <column length="5" name="classroom"/>
+        </property>
+        <property name="startTimeText" type="string">
+            <column length="10" name="start_date"/>
+        </property>
+        <property name="endTimeText" type="string">
+            <column length="10" name="end_date"/>
+        </property>
+        <property name="numberStudents" column="number_students" type="int"/>
+        <property name="expired" column="is_expired" type="boolean"/>
+        <property name="percentAttendance" column="percent_attendance" type="double"/>
+    </class>
+</hibernate-mapping>
